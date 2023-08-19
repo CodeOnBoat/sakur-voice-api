@@ -13,7 +13,7 @@ function App() {
 
   const submit = () => {
     sendVoiceMessage(blob!, input).then((res) => {
-      setOutput(JSON.stringify(res));
+      setOutput(JSON.stringify(res, null, 2));
     });
   };
 
