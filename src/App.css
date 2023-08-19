@@ -2,12 +2,17 @@
   resize: none;
   height: 20em;
   width: 80%;
-
 }
 
 .record-image {
   width: 100px;
   height: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.record-image:hover {
+  transform: scale(1.05);
 }
 
 .App {
@@ -16,7 +21,6 @@
   width: 100vw;
   align-items: center;
   gap: 2em;
-  
 }
 
 .app-container {
@@ -64,7 +68,5 @@
   .app-container {
     display: flex;
     flex-direction: column;
-
   }
-
 }
