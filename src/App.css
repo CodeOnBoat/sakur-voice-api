@@ -1,38 +1,70 @@
+.textarea {
+  resize: none;
+  height: 20em;
+  width: 80%;
+
+}
+
+.record-image {
+  width: 100px;
+  height: 100px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  gap: 2em;
+  
+}
+
+.app-container {
+  box-sizing: border-box;
+  margin-top: 4em;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 3em;
+  width: 90vw;
 }
 
-.App-link {
-  color: #61dafb;
+.submitButton {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00d775, #00bd68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.submitButton:hover {
+  background: #00bd68;
+}
+
+@media only screen and (max-width: 900px) {
+  .app-container {
+    display: flex;
+    flex-direction: column;
+
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }
