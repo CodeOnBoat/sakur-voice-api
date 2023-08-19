@@ -34,6 +34,9 @@ function App() {
         className="submitButton"
         onClick={submit}
         disabled={blob === null}
+        style={{
+          filter: blob === null ? "grayscale(1)" : "none",
+        }}
       >
         Submit
       </button>
