@@ -4,7 +4,7 @@ import RecordingImage from "../images/loading.gif";
 import { useAudioRecorder } from "react-audio-voice-recorder";
 
 type VoiceRecorderProps = {
-  setBlob: (blob: Blob) => void;
+  setBlob: (blob: Blob | null) => void;
 };
 
 export const VoiceRecorder = ({ setBlob }: VoiceRecorderProps) => {
@@ -14,6 +14,10 @@ export const VoiceRecorder = ({ setBlob }: VoiceRecorderProps) => {
     if (!recordingBlob) return;
     setBlob(recordingBlob);
   }, [recordingBlob]);
+
+  useEffect(() => {
+    setBlob(null);
+  }, [isRecording]);
   return (
     <div>
       {isRecording ? (

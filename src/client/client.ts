@@ -8,9 +8,9 @@ export const sendVoiceMessage = async (voice: Blob, data: {}) => {
   formData.append("functionsToCallCollection", data);
   formData.append("file", voice);
   const res = await axios.post(`${root}/voice`, formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
+    // headers: {
+    //   "Content-Type": "multipart/form-data",
+    // },
   });
   return res.data;
 };
